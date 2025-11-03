@@ -7,6 +7,19 @@
             <!-- Показ SQL, якщо треба -->
             <property name="eclipselink.logging.level.sql" value="FINE"/>
         </properties>
-
+    </persistence-unit>
+    <!-- локальный PU для IDE -->
+    <persistence-unit name="demoPU-local" transaction-type="RESOURCE_LOCAL">
+        <class>com.example.lab3_vk9.entity.Applicant</class>
+        <class>com.example.lab3_vk9.entity.Specialty</class>
+        <class>com.example.lab3_vk9.entity.SpecialtyForApplicant</class>
+        <class>com.example.lab3_vk9.entity.Subject</class>
+        <class>com.example.lab3_vk9.entity.SubjectForSpecialty</class>
+        <properties>
+            <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+            <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/vk9_lab3"/>
+            <property name="jakarta.persistence.jdbc.user" value="root"/>
+            <property name="jakarta.persistence.jdbc.password" value=""/>
+        </properties>
     </persistence-unit>
 </persistence>
