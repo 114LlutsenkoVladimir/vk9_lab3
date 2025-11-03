@@ -1,0 +1,11 @@
+<resources>
+    <jdbc-connection-pool name="PgPool" resType="javax.sql.DataSource" driverClassname="org.postgresql.Driver"
+                          steadyPoolSize="2" maxPoolSize="10" poolResizeQuantity="2"
+                          datasourceClassname="" isAssociateWithThread="false">
+        <property name="URL" value="jdbc:postgresql://localhost:5432/demo"/>
+        <property name="User" value="demo"/>
+        <property name="Password" value="demo"/>
+    </jdbc-connection-pool>
+
+    <jdbc-resource poolName="PgPool" jndiName="jdbc/demoDS"/>
+</resources>
