@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
-@Entity
+@Entity(name = "Applicant")
 @Table(name = "applicant", schema = "vk9_lab3")
 public class Applicant {
     @Id

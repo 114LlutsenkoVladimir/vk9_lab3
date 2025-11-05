@@ -2,7 +2,7 @@ package com.example.lab3_vk9.entity;
 
 import jakarta.persistence.*;
 
-@Entity
+@Entity(name = "SpecialtyForApplicant")
 @Table(name = "specialty_for_applicant", schema = "vk9_lab3")
 public class SpecialtyForApplicant {
     @Id
