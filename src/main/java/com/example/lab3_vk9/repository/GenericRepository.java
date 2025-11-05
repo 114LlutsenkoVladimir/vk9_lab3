@@ -15,14 +15,11 @@ public abstract class GenericRepository<T, ID> {
         this.entityClass = entityClass;
     }
 
-    private GenericRepository() {
-    }
-
     public void create(T entity) {
         em.persist(entity);
     }
 
-    public T find(ID id) {
+    public T findById(ID id) {
         return em.find(entityClass, id);
     }
 
