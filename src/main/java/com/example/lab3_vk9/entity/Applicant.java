@@ -2,6 +2,7 @@ package com.example.lab3_vk9.entity;
 
 import jakarta.persistence.*;
 
+import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -18,6 +19,12 @@ public class Applicant {
 
     @Column(name = "last_name", nullable = false, length = 70)
     private String lastName;
+
+    @Column(name = "birth_date")
+    private LocalDate birthDate;
+
+    @Column(name = "average_mark")
+    private Double averageMark;
 
     @OneToMany(mappedBy = "applicant")
     private Set<SpecialtyForApplicant> specialtyForApplicants = new LinkedHashSet<>();
@@ -36,6 +43,22 @@ public class Applicant {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public LocalDate getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(LocalDate birthDate) {
+        this.birthDate = birthDate;
+    }
+
+    public Double getAverageMark() {
+        return averageMark;
+    }
+
+    public void setAverageMark(Double averageMark) {
+        this.averageMark = averageMark;
     }
 
     public String getLastName() {

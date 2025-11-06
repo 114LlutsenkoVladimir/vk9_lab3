@@ -4,11 +4,11 @@ import com.example.lab3_vk9.repository.GenericRepository;
 
 import java.util.List;
 
-public class AbstractCrudBean<T, ID, RP extends GenericRepository<T, ID>> {
+public class AbstractCrudService<T, ID, RP extends GenericRepository<T, ID>> {
 
     private RP repository;
 
-    protected AbstractCrudBean(RP repository) {
+    protected AbstractCrudService(RP repository) {
         this.repository = repository;
     }
 
