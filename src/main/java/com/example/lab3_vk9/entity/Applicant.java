@@ -77,4 +77,11 @@ public class Applicant {
         this.specialtyForApplicants = specialtyForApplicants;
     }
 
+    public void copy(Applicant applicant) {
+        this.firstName = applicant.getFirstName();
+        this.lastName = applicant.getLastName();
+        this.averageMark = applicant.getAverageMark();
+        this.birthDate = applicant.getBirthDate();
+    }
+
 }

@@ -6,7 +6,7 @@ import java.util.List;
 
 public class AbstractCrudService<T, ID, RP extends GenericRepository<T, ID>> {
 
-    private RP repository;
+    protected RP repository;
 
     protected AbstractCrudService(RP repository) {
         this.repository = repository;

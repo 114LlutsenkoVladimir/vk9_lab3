@@ -17,6 +17,7 @@ public abstract class GenericRepository<T, ID> {
 
     public void create(T entity) {
         em.persist(entity);
+        em.flush();
     }
 
     public T findById(ID id) {
